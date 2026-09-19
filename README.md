@@ -10,6 +10,7 @@
 O **ServiceDesk ITSM** automatiza o ciclo de vida de chamados técnicos, aplicando regras de priorização e cálculo dinâmico de SLA, além de fornecer um painel analítico com métricas em tempo real.
 
 ---
+<img width="400" height="207" alt="ServiceDesk ITSM — Gestão de Incidentes   SLA" src="https://github.com/user-attachments/assets/947d9e0b-baaa-477a-a929-c78f0752f75e" />
 
 ## 🚀 Funcionalidades Principais
 
@@ -88,3 +89,4 @@ itsm-ticket-system/
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pedro-h-devv)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pedro-H-Dev)
 
+https://github.com/user-attachments/assets/3fa6862a-b6be-4b12-97eb-c8e179ed5aba
