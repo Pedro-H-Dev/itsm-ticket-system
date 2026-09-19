@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #38bdf8;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Métricas Dashboard */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.metric-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-title {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f8fafc;
+    margin-top: 5px;
+}
+
+.metric-card.warning { border-top: 4px solid #f59e0b; }
+.metric-card.danger { border-top: 4px solid #ef4444; }
+
+/* Grid Principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 25px;
+}
+
+@media (max-width: 850px) {
+    .main-content { grid-template-columns: 1fr; }
+}
+
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    color: #f8fafc;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #334155;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-row .form-group { flex: 1; }
+
+label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+input, textarea, select {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.btn {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.btn:hover { background-color: #0369a1; }
+
+/* Cabeçalho do Painel com Abas */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #334155;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tab-btn {
+    background: #0f172a;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background: #0284c7;
+    color: white;
+    border-color: #0284c7;
+}
+
+#input-busca {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    width: 150px;
+}
+
+/* Cards de Tickets */
+.tickets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ticket-item {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-left: 5px solid #38bdf8;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.ticket-item.Critica { border-left-color: #ef4444; }
+.ticket-item.Alta { border-left-color: #f97316; }
+.ticket-item.Media { border-left-color: #eab308; }
+.ticket-item.Baixa { border-left-color: #22c55e; }
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ticket-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.badge-status {
+    background: #334155;
+    color: #38bdf8;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-status.RESOLVIDO {
+    background: #064e3b;
+    color: #34d399;
+}
+
+.ticket-desc {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    padding-top: 8px;
+}
+
+.actions-group {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-action {
+    background: #334155;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.btn-action:hover { background: #475569; }
+
+.btn-action.delete {
+    background: #7f1d1d;
+    color: #fca5a5;
+}
+
+.btn-action.delete:hover { background: #991b1b; }

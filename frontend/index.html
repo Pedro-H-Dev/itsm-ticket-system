@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSM Portal - Gestão de Incidentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <h1>🛠️ ServiceDesk ITSM</h1>
+                <p>Plataforma Integrada de Gestão de Incidentes & SLA</p>
+            </div>
+        </header>
+
+        <!-- Dashboard de Métricas -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-title">Total Chamados</span>
+                <span class="metric-value" id="metric-total">0</span>
+            </div>
+            <div class="metric-card warning">
+                <span class="metric-title">Abertos</span>
+                <span class="metric-value" id="metric-abertos">0</span>
+            </div>
+            <div class="metric-card danger">
+                <span class="metric-title">Prioridade Crítica</span>
+                <span class="metric-value" id="metric-criticos">0</span>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <!-- Form de Criação -->
+            <section class="card form-section">
+                <h2>Abrir Novo Incidente</h2>
+                <form id="form-ticket">
+                    <div class="form-group">
+                        <label>Título do Incidente:</label>
+                        <input type="text" id="titulo" required placeholder="Ex: Queda de link principal da filial">
+                    </div>
+                    <div class="form-group">
+                        <label>Descrição Detalhada:</label>
+                        <textarea id="descricao" required placeholder="Impacto, usuários afetados e sintomas..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Categoria:</label>
+                            <select id="categoria">
+                                <option value="Rede">Rede / Conectividade</option>
+                                <option value="Hardware">Hardware / Equipamentos</option>
+                                <option value="Software">Software / Sistemas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Prioridade (SLA):</label>
+                            <select id="prioridade">
+                                <option value="Baixa">Baixa (SLA 48h)</option>
+                                <option value="Media">Média (SLA 24h)</option>
+                                <option value="Alta">Alta (SLA 8h)</option>
+                                <option value="Critica">Crítica (SLA 2h)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Registrar Chamado</button>
+                </form>
+            </section>
+
+            <!-- Painel Principal de Chamados -->
+            <section class="card list-section">
+                <div class="panel-header">
+                    <div class="tabs">
+                        <button class="tab-btn active" id="tab-ativos" onclick="alternarAba('ativos')">Fila Ativa</button>
+                        <button class="tab-btn" id="tab-historico" onclick="alternarAba('historico')">Histórico</button>
+                    </div>
+                    <input type="text" id="input-busca" placeholder="🔍 Pesquisar..." oninput="filtrarChamados()">
+                </div>
+
+                <div id="lista-tickets" class="tickets-grid">
+                    <!-- Cards via JS -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
